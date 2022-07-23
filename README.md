@@ -29,6 +29,23 @@ Considering Features
   * Vertical Text Align
   * Word wrapping
 
+Install
+-------
+
+### Linux
+Extract the tar from the [latest release](https://github.com/kkartaltepe/obs-text-pango/releases) into `~/.config/obs-studio/plugins/`
+
+You may need to install the dependencies from the `Build` section.
+
+### MacOS
+Download the pkg from the [latest release](https://github.com/kkartaltepe/obs-text-pango/releases), right click on it and select `Open`.
+
+You may need to install the dependencies from the `Build` section.
+
+### Windows
+Download the zip from [latest release](https://github.com/kkartaltepe/obs-text-pango/releases) and extract into `C:\Program Files\OBS-Studio` or wherever you have installed obs.
+
+
 Build
 -----
 
