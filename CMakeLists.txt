@@ -92,7 +92,6 @@ target_link_libraries(text-pango
 	${FONTCONFIG_LIBRARIES}
 	${PLATFORM_LIBRARIES}) # win only currently
 target_compile_definitions(text-pango PRIVATE ${CAIRO_C_FLAGS})
-target_compile_options(text-pango PRIVATE -Wno-error=pointer-sign)
 
 if(STANDALONE_PLUGIN)
 	if(CMAKE_SIZEOF_VOID_P EQUAL 8)
