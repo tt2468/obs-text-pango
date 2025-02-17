@@ -92,7 +92,7 @@ target_link_libraries(text-pango
 	${FONTCONFIG_LIBRARIES}
 	${PLATFORM_LIBRARIES}) # win only currently
 target_compile_definitions(text-pango PRIVATE ${CAIRO_C_FLAGS})
-
+target_compile_options(text-pango PRIVATE -Wno-error=pointer-sign)
 
 if(STANDALONE_PLUGIN)
 	if(CMAKE_SIZEOF_VOID_P EQUAL 8)
@@ -126,13 +126,6 @@ if(STANDALONE_PLUGIN)
 			DESTINATION data/obs-plugins/text-pango)
 	endif()
 else()
-	install_obs_plugin_with_data(text-pango data/common)
-	# calling this twice might not work?
-	if(WIN32)
-		install_obs_plugin_with_data(text-pango data/win32)
-	endif()
-	if(APPLE)
-		install_obs_plugin_with_data(text-pango data/apple)
-	endif()
+	set_target_properties_obs(text-pango PROPERTIES FOLDER plugins/text-pango PREFIX "")
 endif()
 
